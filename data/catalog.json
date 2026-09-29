@@ -1,0 +1,1525 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Beverages",
+      "description": "Soft drinks, coffees, teas, beers, and ales",
+      "icon": "🍷",
+      "gradient": "linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(168, 85, 247, 0.15))"
+    },
+    {
+      "id": 2,
+      "name": "Condiments",
+      "description": "Sweet and savory sauces, relishes, spreads, and seasonings",
+      "icon": "🧂",
+      "gradient": "linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(234, 88, 12, 0.15))"
+    },
+    {
+      "id": 3,
+      "name": "Confections",
+      "description": "Desserts, candies, and sweet breads",
+      "icon": "🍰",
+      "gradient": "linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(217, 70, 239, 0.15))"
+    },
+    {
+      "id": 4,
+      "name": "Dairy Products",
+      "description": "Cheeses",
+      "icon": "🧀",
+      "gradient": "linear-gradient(135deg, rgba(234, 179, 8, 0.15), rgba(202, 138, 4, 0.15))"
+    },
+    {
+      "id": 5,
+      "name": "Grains/Cereals",
+      "description": "Breads, crackers, pasta, and cereal",
+      "icon": "🌾",
+      "gradient": "linear-gradient(135deg, rgba(217, 119, 6, 0.15), rgba(180, 83, 9, 0.15))"
+    },
+    {
+      "id": 6,
+      "name": "Meat/Poultry",
+      "description": "Prepared meats",
+      "icon": "🥩",
+      "gradient": "linear-gradient(135deg, rgba(225, 29, 72, 0.15), rgba(159, 18, 57, 0.15))"
+    },
+    {
+      "id": 7,
+      "name": "Produce",
+      "description": "Dried fruit and bean curd",
+      "icon": "🍎",
+      "gradient": "linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(16, 185, 129, 0.15))"
+    },
+    {
+      "id": 8,
+      "name": "Seafood",
+      "description": "Seaweed and fish",
+      "icon": "🐟",
+      "gradient": "linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15))"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Chai",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "10 boxes x 20 bags",
+      "unitPrice": 18.0,
+      "unitsInStock": 39,
+      "discontinued": false,
+      "emoji": "🍵",
+      "rating": 4.6,
+      "reviewCount": 25,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Chang",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 12 oz bottles",
+      "unitPrice": 19.0,
+      "unitsInStock": 17,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.7,
+      "reviewCount": 32,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Aniseed Syrup",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "12 - 550 ml bottles",
+      "unitPrice": 10.0,
+      "unitsInStock": 13,
+      "discontinued": false,
+      "emoji": "🍯",
+      "rating": 4.8,
+      "reviewCount": 39,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Chef Anton's Cajun Seasoning",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "48 - 6 oz jars",
+      "unitPrice": 22.0,
+      "unitsInStock": 53,
+      "discontinued": false,
+      "emoji": "🌶️",
+      "rating": 4.9,
+      "reviewCount": 46,
+      "badge": "Edição Limitada",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Chef Anton's Gumbo Mix",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "36 boxes",
+      "unitPrice": 21.35,
+      "unitsInStock": 0,
+      "discontinued": true,
+      "emoji": "🍲",
+      "rating": 4.5,
+      "reviewCount": 53,
+      "badge": "Artesanal",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Grandma's Boysenberry Spread",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "12 - 8 oz jars",
+      "unitPrice": 25.0,
+      "unitsInStock": 120,
+      "discontinued": false,
+      "emoji": "🫐",
+      "rating": 4.6,
+      "reviewCount": 60,
+      "badge": "Bestseller",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Uncle Bob's Organic Dried Pears",
+      "categoryId": 7,
+      "categoryName": "Produce",
+      "quantityPerUnit": "12 - 1 lb pkgs.",
+      "unitPrice": 30.0,
+      "unitsInStock": 15,
+      "discontinued": false,
+      "emoji": "🍐",
+      "rating": 4.7,
+      "reviewCount": 67,
+      "badge": "Seleção Gourmet",
+      "tags": [
+        "Orgânico",
+        "Fresco",
+        "Colheita selecionada"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Northwoods Cranberry Sauce",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "12 - 12 oz jars",
+      "unitPrice": 40.0,
+      "unitsInStock": 6,
+      "discontinued": false,
+      "emoji": "🍒",
+      "rating": 4.8,
+      "reviewCount": 74,
+      "badge": "Importado",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Mishi Kobe Niku",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "18 - 500 g pkgs.",
+      "unitPrice": 97.0,
+      "unitsInStock": 29,
+      "discontinued": true,
+      "emoji": "🥩",
+      "rating": 4.9,
+      "reviewCount": 81,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Ikura",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "12 - 200 ml jars",
+      "unitPrice": 31.0,
+      "unitsInStock": 31,
+      "discontinued": false,
+      "emoji": "🍣",
+      "rating": 4.5,
+      "reviewCount": 88,
+      "badge": "Edição Limitada",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Queso Cabrales",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "1 kg pkg.",
+      "unitPrice": 21.0,
+      "unitsInStock": 22,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.6,
+      "reviewCount": 95,
+      "badge": "Artesanal",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Queso Manchego La Pastora",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "10 - 500 g pkgs.",
+      "unitPrice": 38.0,
+      "unitsInStock": 86,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.7,
+      "reviewCount": 102,
+      "badge": "Bestseller",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Konbu",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "2 kg box",
+      "unitPrice": 6.0,
+      "unitsInStock": 24,
+      "discontinued": false,
+      "emoji": "🌿",
+      "rating": 4.8,
+      "reviewCount": 109,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Tofu",
+      "categoryId": 7,
+      "categoryName": "Produce",
+      "quantityPerUnit": "40 - 100 g pkgs.",
+      "unitPrice": 23.25,
+      "unitsInStock": 35,
+      "discontinued": false,
+      "emoji": "🥢",
+      "rating": 4.9,
+      "reviewCount": 116,
+      "badge": "Importado",
+      "tags": [
+        "Orgânico",
+        "Fresco",
+        "Colheita selecionada"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Genen Shouyu",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "24 - 250 ml bottles",
+      "unitPrice": 15.5,
+      "unitsInStock": 39,
+      "discontinued": false,
+      "emoji": "🍶",
+      "rating": 4.5,
+      "reviewCount": 123,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Pavlova",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "32 - 500 g boxes",
+      "unitPrice": 17.45,
+      "unitsInStock": 29,
+      "discontinued": false,
+      "emoji": "🍰",
+      "rating": 4.6,
+      "reviewCount": 130,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Alice Mutton",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "20 - 1 kg tins",
+      "unitPrice": 39.0,
+      "unitsInStock": 0,
+      "discontinued": true,
+      "emoji": "🍖",
+      "rating": 4.7,
+      "reviewCount": 137,
+      "badge": "Artesanal",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Carnarvon Tigers",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "16 kg pkg.",
+      "unitPrice": 62.5,
+      "unitsInStock": 42,
+      "discontinued": false,
+      "emoji": "🦐",
+      "rating": 4.8,
+      "reviewCount": 144,
+      "badge": "Bestseller",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Teatime Chocolate Biscuits",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "10 boxes x 12 pieces",
+      "unitPrice": 9.2,
+      "unitsInStock": 25,
+      "discontinued": false,
+      "emoji": "🍪",
+      "rating": 4.9,
+      "reviewCount": 151,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Sir Rodney's Marmalade",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "30 gift boxes",
+      "unitPrice": 81.0,
+      "unitsInStock": 40,
+      "discontinued": false,
+      "emoji": "🍊",
+      "rating": 4.5,
+      "reviewCount": 158,
+      "badge": "Importado",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Sir Rodney's Scones",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "24 pkgs. x 4 pieces",
+      "unitPrice": 10.0,
+      "unitsInStock": 3,
+      "discontinued": false,
+      "emoji": "🧁",
+      "rating": 4.6,
+      "reviewCount": 165,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Gustaf's Knäckebröd",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "24 - 500 g pkgs.",
+      "unitPrice": 21.0,
+      "unitsInStock": 104,
+      "discontinued": false,
+      "emoji": "🥖",
+      "rating": 4.7,
+      "reviewCount": 172,
+      "badge": "Edição Limitada",
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Tunnbröd",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "12 - 250 g pkgs.",
+      "unitPrice": 9.0,
+      "unitsInStock": 61,
+      "discontinued": false,
+      "emoji": "🫓",
+      "rating": 4.8,
+      "reviewCount": 179,
+      "badge": null,
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Guaraná Fantástica",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "12 - 355 ml cans",
+      "unitPrice": 4.5,
+      "unitsInStock": 20,
+      "discontinued": true,
+      "emoji": "��",
+      "rating": 4.9,
+      "reviewCount": 186,
+      "badge": "Bestseller",
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "NuNuCa Nuß-Nougat-Creme",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "20 - 450 g glasses",
+      "unitPrice": 14.0,
+      "unitsInStock": 76,
+      "discontinued": false,
+      "emoji": "🍫",
+      "rating": 4.5,
+      "reviewCount": 193,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Gumbär Gummibärchen",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "100 - 250 g bags",
+      "unitPrice": 31.23,
+      "unitsInStock": 15,
+      "discontinued": false,
+      "emoji": "🍬",
+      "rating": 4.6,
+      "reviewCount": 20,
+      "badge": "Importado",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Schoggi Schokolade",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "100 - 100 g pieces",
+      "unitPrice": 43.9,
+      "unitsInStock": 49,
+      "discontinued": false,
+      "emoji": "🍫",
+      "rating": 4.7,
+      "reviewCount": 27,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Rössle Sauerkraut",
+      "categoryId": 7,
+      "categoryName": "Produce",
+      "quantityPerUnit": "25 - 825 g cans",
+      "unitPrice": 45.6,
+      "unitsInStock": 26,
+      "discontinued": true,
+      "emoji": "🥬",
+      "rating": 4.8,
+      "reviewCount": 34,
+      "badge": "Edição Limitada",
+      "tags": [
+        "Orgânico",
+        "Fresco",
+        "Colheita selecionada"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Thüringer Rostbratwurst",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "50 bags x 30 sausgs.",
+      "unitPrice": 123.79,
+      "unitsInStock": 0,
+      "discontinued": true,
+      "emoji": "🌭",
+      "rating": 4.9,
+      "reviewCount": 41,
+      "badge": "Artesanal",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Nord-Ost Matjeshering",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "10 - 200 g glasses",
+      "unitPrice": 25.89,
+      "unitsInStock": 10,
+      "discontinued": false,
+      "emoji": "🐟",
+      "rating": 4.5,
+      "reviewCount": 48,
+      "badge": "Bestseller",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Gorgonzola Telino",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "12 - 100 g pkgs",
+      "unitPrice": 12.5,
+      "unitsInStock": 0,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.6,
+      "reviewCount": 55,
+      "badge": null,
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Mascarpone Fabioli",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "24 - 200 g pkgs.",
+      "unitPrice": 32.0,
+      "unitsInStock": 9,
+      "discontinued": false,
+      "emoji": "🧈",
+      "rating": 4.7,
+      "reviewCount": 62,
+      "badge": "Importado",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Geitost",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "500 g",
+      "unitPrice": 2.5,
+      "unitsInStock": 112,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.8,
+      "reviewCount": 69,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Sasquatch Ale",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 12 oz bottles",
+      "unitPrice": 14.0,
+      "unitsInStock": 111,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.9,
+      "reviewCount": 76,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Steeleye Stout",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 12 oz bottles",
+      "unitPrice": 18.0,
+      "unitsInStock": 20,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.5,
+      "reviewCount": 83,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Inlagd Sill",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "24 - 250 g  jars",
+      "unitPrice": 19.0,
+      "unitsInStock": 112,
+      "discontinued": false,
+      "emoji": "🐟",
+      "rating": 4.6,
+      "reviewCount": 90,
+      "badge": "Bestseller",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Gravad lax",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "12 - 500 g pkgs.",
+      "unitPrice": 26.0,
+      "unitsInStock": 11,
+      "discontinued": false,
+      "emoji": "🐟",
+      "rating": 4.7,
+      "reviewCount": 97,
+      "badge": "Seleção Gourmet",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Côte de Blaye",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "12 - 75 cl bottles",
+      "unitPrice": 263.5,
+      "unitsInStock": 17,
+      "discontinued": false,
+      "emoji": "🍷",
+      "rating": 4.8,
+      "reviewCount": 104,
+      "badge": "Importado",
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Chartreuse verte",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "750 cc per bottle",
+      "unitPrice": 18.0,
+      "unitsInStock": 69,
+      "discontinued": false,
+      "emoji": "��",
+      "rating": 4.9,
+      "reviewCount": 111,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Boston Crab Meat",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "24 - 4 oz tins",
+      "unitPrice": 18.4,
+      "unitsInStock": 123,
+      "discontinued": false,
+      "emoji": "🦀",
+      "rating": 4.5,
+      "reviewCount": 118,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Jack's New England Clam Chowder",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "12 - 12 oz cans",
+      "unitPrice": 9.65,
+      "unitsInStock": 85,
+      "discontinued": false,
+      "emoji": "🥣",
+      "rating": 4.6,
+      "reviewCount": 125,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Singaporean Hokkien Fried Mee",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "32 - 1 kg pkgs.",
+      "unitPrice": 14.0,
+      "unitsInStock": 26,
+      "discontinued": true,
+      "emoji": "🍜",
+      "rating": 4.7,
+      "reviewCount": 132,
+      "badge": "Bestseller",
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Ipoh Coffee",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "16 - 500 g tins",
+      "unitPrice": 46.0,
+      "unitsInStock": 17,
+      "discontinued": false,
+      "emoji": "☕",
+      "rating": 4.8,
+      "reviewCount": 139,
+      "badge": "Seleção Gourmet",
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Gula Malacca",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "20 - 2 kg bags",
+      "unitPrice": 19.45,
+      "unitsInStock": 27,
+      "discontinued": false,
+      "emoji": "🥥",
+      "rating": 4.9,
+      "reviewCount": 146,
+      "badge": null,
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Rogede sild",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "1k pkg.",
+      "unitPrice": 9.5,
+      "unitsInStock": 5,
+      "discontinued": false,
+      "emoji": "🐟",
+      "rating": 4.5,
+      "reviewCount": 153,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Spegesild",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "4 - 450 g glasses",
+      "unitPrice": 12.0,
+      "unitsInStock": 95,
+      "discontinued": false,
+      "emoji": "🐟",
+      "rating": 4.6,
+      "reviewCount": 160,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Zaanse koeken",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "10 - 4 oz boxes",
+      "unitPrice": 9.5,
+      "unitsInStock": 36,
+      "discontinued": false,
+      "emoji": "🍪",
+      "rating": 4.7,
+      "reviewCount": 167,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Chocolade",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "10 pkgs.",
+      "unitPrice": 12.75,
+      "unitsInStock": 15,
+      "discontinued": false,
+      "emoji": "🍫",
+      "rating": 4.8,
+      "reviewCount": 174,
+      "badge": "Bestseller",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Maxilaku",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "24 - 50 g pkgs.",
+      "unitPrice": 20.0,
+      "unitsInStock": 10,
+      "discontinued": false,
+      "emoji": "🍬",
+      "rating": 4.9,
+      "reviewCount": 181,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Valkoinen suklaa",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "12 - 100 g bars",
+      "unitPrice": 16.25,
+      "unitsInStock": 65,
+      "discontinued": false,
+      "emoji": "🍫",
+      "rating": 4.5,
+      "reviewCount": 188,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Manjimup Dried Apples",
+      "categoryId": 7,
+      "categoryName": "Produce",
+      "quantityPerUnit": "50 - 300 g pkgs.",
+      "unitPrice": 53.0,
+      "unitsInStock": 20,
+      "discontinued": false,
+      "emoji": "🍎",
+      "rating": 4.6,
+      "reviewCount": 195,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Orgânico",
+        "Fresco",
+        "Colheita selecionada"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Filo Mix",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "16 - 2 kg boxes",
+      "unitPrice": 7.0,
+      "unitsInStock": 38,
+      "discontinued": false,
+      "emoji": "🥐",
+      "rating": 4.7,
+      "reviewCount": 22,
+      "badge": null,
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Perth Pasties",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "48 pieces",
+      "unitPrice": 32.8,
+      "unitsInStock": 0,
+      "discontinued": true,
+      "emoji": "🥧",
+      "rating": 4.8,
+      "reviewCount": 29,
+      "badge": "Artesanal",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Tourtière",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "16 pies",
+      "unitPrice": 7.45,
+      "unitsInStock": 21,
+      "discontinued": false,
+      "emoji": "🥧",
+      "rating": 4.9,
+      "reviewCount": 36,
+      "badge": "Bestseller",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Pâté chinois",
+      "categoryId": 6,
+      "categoryName": "Meat/Poultry",
+      "quantityPerUnit": "24 boxes x 2 pies",
+      "unitPrice": 24.0,
+      "unitsInStock": 115,
+      "discontinued": false,
+      "emoji": "🍲",
+      "rating": 4.5,
+      "reviewCount": 43,
+      "badge": "Seleção Gourmet",
+      "tags": [
+        "Corte nobre",
+        "Sabor rico",
+        "Defumado"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Gnocchi di nonna Alice",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "24 - 250 g pkgs.",
+      "unitPrice": 38.0,
+      "unitsInStock": 21,
+      "discontinued": false,
+      "emoji": "🍝",
+      "rating": 4.6,
+      "reviewCount": 50,
+      "badge": "Importado",
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Ravioli Angelo",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "24 - 250 g pkgs.",
+      "unitPrice": 19.5,
+      "unitsInStock": 36,
+      "discontinued": false,
+      "emoji": "🥟",
+      "rating": 4.7,
+      "reviewCount": 57,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Escargots de Bourgogne",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "24 pieces",
+      "unitPrice": 13.25,
+      "unitsInStock": 62,
+      "discontinued": false,
+      "emoji": "🐌",
+      "rating": 4.8,
+      "reviewCount": 64,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Raclette Courdavault",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "5 kg pkg.",
+      "unitPrice": 55.0,
+      "unitsInStock": 79,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.9,
+      "reviewCount": 71,
+      "badge": "Artesanal",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Camembert Pierrot",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "15 - 300 g rounds",
+      "unitPrice": 34.0,
+      "unitsInStock": 19,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.5,
+      "reviewCount": 78,
+      "badge": "Bestseller",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Sirop d'érable",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "24 - 500 ml bottles",
+      "unitPrice": 28.5,
+      "unitsInStock": 113,
+      "discontinued": false,
+      "emoji": "🍁",
+      "rating": 4.6,
+      "reviewCount": 85,
+      "badge": "Seleção Gourmet",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Tarte au sucre",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "48 pies",
+      "unitPrice": 49.3,
+      "unitsInStock": 17,
+      "discontinued": false,
+      "emoji": "🥧",
+      "rating": 4.7,
+      "reviewCount": 92,
+      "badge": "Importado",
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Vegie-spread",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "15 - 625 g jars",
+      "unitPrice": 43.9,
+      "unitsInStock": 24,
+      "discontinued": false,
+      "emoji": "🥑",
+      "rating": 4.8,
+      "reviewCount": 99,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Wimmers gute Semmelknödel",
+      "categoryId": 5,
+      "categoryName": "Grains/Cereals",
+      "quantityPerUnit": "20 bags x 4 pieces",
+      "unitPrice": 33.25,
+      "unitsInStock": 22,
+      "discontinued": false,
+      "emoji": "🥖",
+      "rating": 4.9,
+      "reviewCount": 106,
+      "badge": "Edição Limitada",
+      "tags": [
+        "Artesanal",
+        "Textura perfeita",
+        "Tradicional"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Louisiana Fiery Hot Pepper Sauce",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "32 - 8 oz bottles",
+      "unitPrice": 21.05,
+      "unitsInStock": 76,
+      "discontinued": false,
+      "emoji": "🌶️",
+      "rating": 4.5,
+      "reviewCount": 113,
+      "badge": "Artesanal",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Louisiana Hot Spiced Okra",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "24 - 8 oz jars",
+      "unitPrice": 17.0,
+      "unitsInStock": 4,
+      "discontinued": false,
+      "emoji": "🥒",
+      "rating": 4.6,
+      "reviewCount": 120,
+      "badge": "Bestseller",
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Laughing Lumberjack Lager",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 12 oz bottles",
+      "unitPrice": 14.0,
+      "unitsInStock": 52,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.7,
+      "reviewCount": 127,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Scottish Longbreads",
+      "categoryId": 3,
+      "categoryName": "Confections",
+      "quantityPerUnit": "10 boxes x 8 pieces",
+      "unitPrice": 12.5,
+      "unitsInStock": 6,
+      "discontinued": false,
+      "emoji": "🍪",
+      "rating": 4.8,
+      "reviewCount": 134,
+      "badge": null,
+      "tags": [
+        "Doçura fina",
+        "Sobremesa",
+        "Harmoniza com café/chá"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Gudbrandsdalsost",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "10 kg pkg.",
+      "unitPrice": 36.0,
+      "unitsInStock": 26,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.9,
+      "reviewCount": 141,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Outback Lager",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 355 ml bottles",
+      "unitPrice": 15.0,
+      "unitsInStock": 15,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.5,
+      "reviewCount": 148,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Flotemysost",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "10 - 500 g pkgs.",
+      "unitPrice": 21.5,
+      "unitsInStock": 26,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.6,
+      "reviewCount": 155,
+      "badge": "Artesanal",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Mozzarella di Giovanni",
+      "categoryId": 4,
+      "categoryName": "Dairy Products",
+      "quantityPerUnit": "24 - 200 g pkgs.",
+      "unitPrice": 34.8,
+      "unitsInStock": 14,
+      "discontinued": false,
+      "emoji": "🧀",
+      "rating": 4.7,
+      "reviewCount": 162,
+      "badge": "Bestseller",
+      "tags": [
+        "Maturado",
+        "Cremoso",
+        "Combina com vinhos"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Röd Kaviar",
+      "categoryId": 8,
+      "categoryName": "Seafood",
+      "quantityPerUnit": "24 - 150 g jars",
+      "unitPrice": 15.0,
+      "unitsInStock": 101,
+      "discontinued": false,
+      "emoji": "🍣",
+      "rating": 4.8,
+      "reviewCount": 169,
+      "badge": null,
+      "tags": [
+        "Pescado fresco",
+        "Origem controlada",
+        "Marítimo"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Longlife Tofu",
+      "categoryId": 7,
+      "categoryName": "Produce",
+      "quantityPerUnit": "5 kg pkg.",
+      "unitPrice": 10.0,
+      "unitsInStock": 4,
+      "discontinued": false,
+      "emoji": "🥢",
+      "rating": 4.9,
+      "reviewCount": 176,
+      "badge": null,
+      "tags": [
+        "Orgânico",
+        "Fresco",
+        "Colheita selecionada"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Rhönbräu Klosterbier",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "24 - 0.5 l bottles",
+      "unitPrice": 7.75,
+      "unitsInStock": 125,
+      "discontinued": false,
+      "emoji": "🍺",
+      "rating": 4.5,
+      "reviewCount": 183,
+      "badge": "Clássico Northwind",
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Lakkalikööri",
+      "categoryId": 1,
+      "categoryName": "Beverages",
+      "quantityPerUnit": "500 ml",
+      "unitPrice": 18.0,
+      "unitsInStock": 57,
+      "discontinued": false,
+      "emoji": "🍸",
+      "rating": 4.6,
+      "reviewCount": 190,
+      "badge": null,
+      "tags": [
+        "Aromático",
+        "Refrescante",
+        "Harmoniza com doces"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Original Frankfurter grüne Soße",
+      "categoryId": 2,
+      "categoryName": "Condiments",
+      "quantityPerUnit": "12 boxes",
+      "unitPrice": 13.0,
+      "unitsInStock": 32,
+      "discontinued": false,
+      "emoji": "🌿",
+      "rating": 4.7,
+      "reviewCount": 197,
+      "badge": null,
+      "tags": [
+        "Tempero fino",
+        "Intenso",
+        "Gourmet"
+      ]
+    }
+  ]
+}

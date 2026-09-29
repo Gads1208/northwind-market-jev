@@ -278,48 +278,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     productsGrid.innerHTML = items.map(p => {
-      const badgeHtml = p.badge ? `<span class="card-badge badge-gold">${p.badge}</span>` : '';
-      const tagsHtml = (p.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('');
+      const badgeHtml = p.badge ? `<div class="card-badge-overlay"><span class="card-badge badge-gold">${p.badge}</span></div>` : '';
+      const tagsHtml = (p.tags || []).slice(0, 2).map(t => `<span class="tag-pill">${t}</span>`).join('');
       const inCart = state.cart.find(c => c.id === p.id);
-      const btnText = inCart ? `Adicionado (${inCart.quantity})` : 'Adicionar à Cesta';
+      const btnText = inCart ? `Adicionado (${inCart.quantity})` : 'Adicionar';
       const btnClass = inCart ? 'btn-add-cart in-cart' : 'btn-add-cart';
+      const imgUrl = p.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=80';
+      const ratingVal = p.rating ? p.rating.toFixed(1) : '4.8';
 
       return `
         <div class="product-card" data-product-id="${p.id}">
-          <div>
-            <div class="card-top">
-              <div class="card-emoji-box" style="background: ${getCategoryGradient(p.categoryId)}">
-                <span>${p.emoji || '🍽️'}</span>
+          <div class="card-top-block">
+            <div class="card-image-box">
+              <img src="${imgUrl}" alt="${p.name}" class="card-image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=80';">
+              <div class="card-rating-badge">
+                <span>★ ${ratingVal}</span>
+                <span>${p.countryFlag || '🌿'}</span>
               </div>
               ${badgeHtml}
             </div>
 
             <div class="card-category">${p.categoryName}</div>
             <h3 class="card-title">${p.name}</h3>
-            <div class="card-specs">${p.quantityPerUnit} &bull; Estoque: ${p.unitsInStock}</div>
+            <div class="card-specs">${p.quantityPerUnit}</div>
 
             <div class="card-tags">
               ${tagsHtml}
             </div>
           </div>
 
-          <div>
-            <div class="card-rating-row">
-              <span class="stars">★ ${p.rating}</span>
-              <span>(${p.reviewCount} avaliações)</span>
+          <div class="card-footer">
+            <div class="card-price-box">
+              <span class="card-price-label">Preço</span>
+              <span class="card-price">$${p.unitPrice.toFixed(2)}</span>
             </div>
 
-            <div class="card-footer">
-              <div class="card-price-box">
-                <span class="card-price-label">Preço unitário</span>
-                <span class="card-price">$${p.unitPrice.toFixed(2)}</span>
-              </div>
-
-              <button class="${btnClass}" onclick="window.addToCart(${p.id})">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-                <span>${btnText}</span>
-              </button>
-            </div>
+            <button class="${btnClass}" onclick="window.addToCart(${p.id})">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              <span>${btnText}</span>
+            </button>
           </div>
         </div>
       `;
@@ -356,6 +353,9 @@ document.addEventListener("DOMContentLoaded", () => {
         unitPrice: product.unitPrice,
         quantity: 1,
         emoji: product.emoji,
+        image: product.image,
+        countryFlag: product.countryFlag,
+        quantityPerUnit: product.quantityPerUnit,
         tags: product.tags
       });
     }
@@ -444,10 +444,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cartItemsContainer.innerHTML = state.cart.map(item => `
       <div class="cart-item">
-        <div class="cart-item-emoji">${item.emoji || '🍽️'}</div>
+        <img src="${item.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100'}" class="cart-item-thumb" alt="${item.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100';">
         <div class="cart-item-info">
           <span class="cart-item-name">${item.name}</span>
-          <span class="cart-item-unit-price">$${item.unitPrice.toFixed(2)} / un</span>
+          <span class="cart-item-unit-price">${item.quantityPerUnit || ''} &bull; $${item.unitPrice.toFixed(2)}</span>
           <div class="cart-item-controls">
             <button class="qty-btn" onclick="window.changeQty(${item.id}, -1)">&minus;</button>
             <span class="cart-item-qty">${item.quantity}</span>
@@ -488,8 +488,9 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchJevRecommendations() {
     state.isRecommending = true;
 
-    // Show subtle pulsing loading state in strip
-    stripConfidence.innerHTML = `Confiança IA: <strong>Calculando...</strong>`;
+    if (stripConfidence) {
+      stripConfidence.innerHTML = `Confiança IA: <strong>Calculando...</strong>`;
+    }
 
     try {
       const response = await fetch("/api/recommend", {
@@ -515,7 +516,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Render Top Recommendation in Hero AI Strip
+  // Render Top Recommendation in Hero AI Strip (Matching Preview Mockup)
   function renderHeroRecommendation(result) {
     const top = result.topChoice;
     if (!top) {
@@ -524,30 +525,110 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const confPct = Math.round(result.confidence * 100);
-    const scoreVal = result.bundleScore || 3.0;
-    const scoreLabels = { 0: "Fraco", 1: "Razoável", 2: "Bom", 3: "Excelente" };
+    const confDeg = Math.round((confPct / 100) * 360);
+    const probPct = top.jevProbability || 92;
 
-    stripConfidence.innerHTML = `Confiança Jev: <strong>${confPct}%</strong>`;
-    stripFit.innerHTML = `Harmonia Gastronômica: <strong>${scoreLabels[Math.round(scoreVal)] || "Excelente"}</strong>`;
+    if (stripConfidence) {
+      stripConfidence.innerHTML = `Confiança Jev: <strong>${confPct}%</strong>`;
+    }
+    if (stripFit) {
+      const scoreLabels = { 0: "Fraco", 1: "Razoável", 2: "Bom", 3: "Excelente" };
+      const scoreVal = result.bundleScore || 3.0;
+      stripFit.innerHTML = `Harmonia Gastronômica: <strong>${scoreLabels[Math.round(scoreVal)] || "Excelente"}</strong>`;
+    }
+
+    // Determine the paired item:
+    // If cart has items, use the most recent item added to cart
+    // Otherwise, pick a high-affinity pairing from catalog (e.g. Chai Tea / Mozzarella)
+    let partnerItem = null;
+    if (state.cart.length > 0) {
+      partnerItem = state.cart[state.cart.length - 1];
+    } else {
+      partnerItem = state.products.find(p => p.id !== top.id && (p.id === 1 || p.categoryId === 1)) || state.products[0];
+    }
+
+    const partnerImg = partnerItem ? (partnerItem.image || 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500') : '';
+    const partnerName = partnerItem ? partnerItem.name : 'Chai Tea Artesanal';
+    const partnerWeight = partnerItem ? (partnerItem.quantityPerUnit || '10 boxes x 20 bags') : '';
+    const partnerPrice = partnerItem ? (typeof partnerItem.unitPrice === 'number' ? partnerItem.unitPrice.toFixed(2) : partnerItem.unitPrice) : '18.00';
+    const partnerFlag = partnerItem ? (partnerItem.countryFlag || '🇮🇳') : '🇮🇳';
+
+    const topImg = top.image || 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500';
+    const topWeight = top.quantityPerUnit || '10 boxes x 12 bags';
+    const topFlag = top.countryFlag || '🇬🇧';
+    const topRating = top.rating ? top.rating.toFixed(1) : '4.9';
 
     stripProductCard.innerHTML = `
-      <div class="strip-recommendation-content">
-        <div class="strip-rec-emoji">${top.emoji || '🍽️'}</div>
-        <div class="strip-rec-info">
-          <div class="strip-rec-header-row">
-            <span class="strip-rec-name">${top.name}</span>
-            <span class="strip-rec-category">${top.categoryName}</span>
-            <span class="strip-rec-prob-badge">🎯 ${top.jevProbability}% probabilidade</span>
+      <div class="pairing-visual-row">
+        <!-- Left Product: Recommended Item -->
+        <div class="pairing-product-box">
+          <div class="pairing-img-wrapper">
+            <img src="${topImg}" alt="${top.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500';">
           </div>
-          <p class="strip-rec-reason">${top.pairingReason}</p>
+          <div class="pairing-product-info">
+            <span class="pairing-product-name">${top.name}</span>
+            <span class="pairing-product-weight">${topWeight} &bull; ${topFlag}</span>
+            <div class="pairing-rating-row">
+              <span class="stars">★ ${topRating}</span>
+              <span class="tag-pill" style="font-size: 0.65rem;">Sugerido</span>
+            </div>
+            <span class="pairing-product-price">$${top.unitPrice.toFixed(2)}</span>
+          </div>
         </div>
-        <div class="strip-rec-actions">
-          <span class="strip-rec-price">$${top.unitPrice.toFixed(2)}</span>
-          <button class="btn-add-strip" onclick="window.addToCart(${top.id})">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-            <span>Adicionar com 1 Clique</span>
-          </button>
+
+        <!-- Center Glowing Connector -->
+        <div class="pairing-connector">
+          <div class="plus-bubble">+</div>
+          <span class="pairing-badge-combo">COMBO SUGERIDO</span>
         </div>
+
+        <!-- Right Product: Complementary Item / Active Cart Item -->
+        <div class="pairing-product-box">
+          <div class="pairing-img-wrapper">
+            <img src="${partnerImg}" alt="${partnerName}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500';">
+          </div>
+          <div class="pairing-product-info">
+            <span class="pairing-product-name">${partnerName}</span>
+            <span class="pairing-product-weight">${partnerWeight} &bull; ${partnerFlag}</span>
+            <div class="pairing-rating-row">
+              <span class="stars">★ 4.8</span>
+              <span class="tag-pill" style="font-size: 0.65rem;">${state.cart.length > 0 ? 'Na sua cesta' : 'Harmonia Ideal'}</span>
+            </div>
+            <span class="pairing-product-price">$${partnerPrice}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Status & 1-Click Action Bar -->
+      <div class="strip-bottom-bar">
+        <!-- Circular Arc Confidence Gauge -->
+        <div class="confidence-gauge-box">
+          <div class="gauge-circle" style="--gauge-deg: ${confDeg}deg;">
+            <span class="gauge-val">${confPct}%</span>
+          </div>
+          <div class="gauge-info">
+            <span class="gauge-label">Confiança Jev IA</span>
+            <span class="gauge-status">Alta Afinidade</span>
+          </div>
+        </div>
+
+        <!-- Probability Progress & Gastronomic Reason -->
+        <div class="prob-progress-box">
+          <div class="prob-header-row">
+            <span class="label">Probabilidade de Compra</span>
+            <span class="status-pill">${probPct}% - OTIMIZADO</span>
+          </div>
+          <div class="prob-neon-bar">
+            <div class="prob-neon-fill" style="width: ${probPct}%;"></div>
+          </div>
+          <p class="gastronomic-quote">"${top.pairingReason}"</p>
+        </div>
+
+        <!-- Neon 1-Click Action Button -->
+        <button class="btn-neon-one-click" onclick="window.addToCart(${top.id})">
+          <span>Adicionar com 1 Clique &bull; $${top.unitPrice.toFixed(2)}</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
       </div>
     `;
   }
@@ -562,10 +643,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cartAiBox.style.display = "block";
     cartAiProb.innerText = `${top.jevProbability}% de afinidade`;
+    const topImg = top.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100';
+
     cartAiContent.innerHTML = `
       <div class="cart-ai-mini-card">
-        <div>
-          <div class="cart-ai-mini-name">${top.emoji || ''} ${top.name} ($${top.unitPrice.toFixed(2)})</div>
+        <img src="${topImg}" class="cart-item-thumb" style="width: 42px; height: 42px;" alt="${top.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100';">
+        <div style="flex: 1;">
+          <div class="cart-ai-mini-name">${top.name} ($${top.unitPrice.toFixed(2)})</div>
           <div class="cart-ai-mini-reason">${top.pairingReason}</div>
         </div>
         <button class="btn-mini-add" onclick="window.addToCart(${top.id})">+ Adicionar</button>

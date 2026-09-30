@@ -1,0 +1,2 @@
+# Northwind Gourmet Market & Jev IA
+# Zero external pip dependencies required (pure standard library HTTP & AI engine)
